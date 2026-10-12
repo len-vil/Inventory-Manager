@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Inventory Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Inventory Manager</h1>
+
+        <form id="productForm">
+            <input type="text" id="productName"
+                   placeholder="Product Name" required>
+
+            <input type="number" id="productPrice"
+                   placeholder="Price" min="0.01" step="0.01" required>
+
+            <input type="number" id="productQuantity"
+                   placeholder="Quantity" min="0" step="1" required>
+
+            <button type="submit">Add Product</button>
+        </form>
+
+        <h2>Inventory</h2>
+
+        <p>Total Products: <span id="totalProducts">0</span></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="inventoryTable"></tbody>
+        </table>
+
+        <p id="message" role="status"></p>
+    </div>
+
+    <script src="dist/inventory.js"></script>
+</body>
+</html>
